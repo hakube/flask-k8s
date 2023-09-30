@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: flask-app-pod
+  labels:
+    app: flask-k8s
+spec:
+  containers:
+  - name: flask
+    image: jacobhernandez/flask-k8s:latest
+    ports:
+    - containerPort: 5000
